@@ -31,6 +31,9 @@ function batStoryLine () {
   if (action === 'run' && odds === 1) {
     window.alert('It\'s a good thing you ran! That bat would have never saved you. You\'re addrenaline rush kicked in and you made it away safely. ')
     gameOverWin()
+  } else if (action === 'run' && odds !== 1) {
+    window.alert('The zombies caught up to you and you unfortunately did not make it out.')
+    gameOver()
   } else if (action === '') {
     window.alert('You panicked and froze up!')
     gameOver()
@@ -74,6 +77,9 @@ function machetteStoryLine () {
           gameOver()
         }
       }
+    } else {
+      window.alert('Zombies were waiting for you in the staircase! You never had a chance.')
+      gameOver()
     }
   }
 }
